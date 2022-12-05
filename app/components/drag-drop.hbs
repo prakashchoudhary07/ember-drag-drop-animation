@@ -1,0 +1,28 @@
+{{page-title 'Scientists'}}
+<h2>
+  List of Scientists
+</h2>
+<div>
+  <AnimatedTools />
+  <div>
+    <AnimatedContainer>
+      <div class="deck-group" {{on 'scroll' this.mouseEvent}}>
+        {{#animated-each
+          this.decks
+          use=this.transition
+          duration=200
+          watch='dragState' as |scientist|
+        }}
+          <div
+            class="deck"
+            data-drag-id={{scientist.itemId}}
+            data-item-id={{scientist.itemId}}
+            {{on 'mousedown' (fn this.beginDragging scientist)}}
+          >
+            {{scientist.itemId}}
+          </div>
+        {{/animated-each}}
+      </div>
+    </AnimatedContainer>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.deck-group {
+  display: grid;
+  grid-template-columns: repeat(4, 185px);
+  grid-row-gap: 30px;
+  justify-content: space-around;
+}
+
+.deck {
+  width: 250px;
+  height: 256px;
+  border: 1px solid black;
+  background-color: grey;
+  border-radius: 5px;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+}
+
+.mascot-card-image {
+  width: auto;
+  height: 126px;
+}
